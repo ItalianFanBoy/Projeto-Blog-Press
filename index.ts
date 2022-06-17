@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database.js");
 const CategoriesController = require("./categories/categoriesController")
-
+const ArticlesControllers = require("./articles/articlesController")
 
 //carregar a viw engine
 
@@ -24,6 +24,7 @@ connection
 
 
 app.use("/", CategoriesController);
+app.use("/", ArticlesControllers)
 
 
 // body parser
