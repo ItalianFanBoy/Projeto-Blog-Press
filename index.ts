@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database.js");
-
+const CategoriesController = require("./categories/categoriesController")
 
 
 //carregar a viw engine
@@ -22,6 +22,8 @@ connection
     console.log("Errou occorreu")
 })
 
+
+app.use("/", CategoriesController);
 
 
 // body parser
