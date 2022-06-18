@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const connection = require("./database/database.js");
 const CategoriesController = require("./categories/categoriesController")
 const ArticlesControllers = require("./articles/articlesController")
+const ArticlesRelation =  require("./articles/articles");
+const CategoriesRelation = require("./categories/category");
 
 //carregar a viw engine
 

@@ -12,4 +12,6 @@ const Category = connectionCategory.define('categorias',{
     }
 })
 
+
+
 module.exports = Category;
