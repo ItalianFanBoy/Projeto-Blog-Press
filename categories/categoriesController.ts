@@ -9,8 +9,8 @@ router.get("/admin/categories/new", (req: any, res :any)=>{
 
 
 router.post("/categories/save", (req:any, res:any)=>{
-    var title = req.body.titulo;
-    if(title != undefined){
+    var title:any = req.body.title;
+     if( title != undefined){
 
         CategorySql.create({
             title: title,
@@ -24,4 +24,4 @@ router.post("/categories/save", (req:any, res:any)=>{
     }
 });
 
-module.exports = router
+module.exports = router;
