@@ -22,15 +22,20 @@
                 <th>Exemplo 2</th>
                 <th>Exemplo 4</th>
                 <th>
+                   
                     <button class="btn btn-warning"> Editar</button>
-                    <buttuon class="btn btn-danger">Deletar</buttuon>
+                    <form action="/categories/delete"  method="POST" style="display: inline;">
+                        <input type="hidden" name="id" value="<%= categories.id %>">
+                        <buttuon class="btn btn-danger">Deletar</buttuon>
+                    </form>
+                    
                 </th>
             </tr>
             <% categories.forEach(category =>{ %>
                 <tr>
-                    <th> <%= category.id %></th>
-                    <th><%= category.title %></th>
-                    <th><%= category.slug  %></th>
+                    <th> <%= categories.id %></th>
+                    <th><%= categories.title %></th>
+                    <th><%= categories.slug  %></th>
                     <th>
                         <button></button>
                     </th>

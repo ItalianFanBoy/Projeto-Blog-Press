@@ -33,4 +33,26 @@ router.get("/admin/categories", (req: any, res:any)=>{
    
 })
 
+router.post("/categories/delete", (req:any, res:any)=>{
+    var id:any = req.body.id;
+    if(id != undefined){
+       if(!isNaN(id)){
+
+        CategorySql.destroy({
+            where:{
+                id: id,
+            }
+        }).then(()=>{
+            res.redirect("/admin/categories")
+        })
+
+    }else{ // nao for or numero
+        res.redirect("/admin/categories");
+    }
+
+    }else{ // null
+        res.redirect("/admin/categories");
+    }
+});
+
 module.exports = router;
