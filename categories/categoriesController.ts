@@ -9,14 +9,14 @@ router.get("/admin/categories/new", (req: any, res :any)=>{
 
 
 router.post("/categories/save", (req:any, res:any)=>{
-    var title = req.body.title;
+    var title = req.body.titulo;
     if(title != undefined){
 
         CategorySql.create({
             title: title,
             slug: slugify(title)
         }).then(()=>{
-            res.redirect("/")
+            res.redirect("/");
         })
 
     }else{
