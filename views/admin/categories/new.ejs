@@ -1,5 +1,25 @@
 <%- include('../../partials/header') %>
 <%- include('../../partials/navbar') %>
-<h2> Bem vindo - ISSO É UM TESTE</h2>
+
+<div class="container">
+    <hr>
+    <div class="card">
+        <div class="card-header"> <h2>
+            Cadastro de Categoria
+        </h2>
+    </div>
+        <div class="card-body">
+     <hr>
+             <form method="POST" action="/categories/save">
+                <input class="form-control" type="text" name="title" placeholder="Defina o titulo da categoria" id="">
+     <br>
+                <button class="btn btn-sucess">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
 
 <%- include('../../partials/footer') %>
