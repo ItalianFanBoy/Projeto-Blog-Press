@@ -77,4 +77,17 @@ router.get("/admin/categories/:id", (req:any, res:any)=>{
    
 });
 
+router.post("/categories/update",(req:any, res:any)=>{
+    var id = req.body.id;
+    var title = req.body.title;
+
+    CategorySql.update({title: title,slug: slugify(title) },{
+        where:{
+            id:id,
+        }
+    }).then(()=>{
+        res.redirect("/admin;categories");
+    })
+})
+
 module.exports = router;

@@ -23,7 +23,8 @@
                 <th>Exemplo 4</th>
                 <th>
                    
-                    <button class="btn btn-warning"> Editar</button>
+                    <a href="/admin/categories/edit/ <%= category.id %>"> class="btn btn-warning"> Editar</a>
+
                     <form action="/categories/delete"  method="POST" style="display: inline;" onsubmit="confirmarDelecao(event, this)">
                         <input type="hidden" name="id" value="<%= categories.id %>">
                         <buttuon class="btn btn-danger">Deletar</buttuon>

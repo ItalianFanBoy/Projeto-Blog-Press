@@ -7,7 +7,7 @@ routerArticles.get("/articles", (req:any, res:any) =>{
 });
 
 routerArticles.get("/admin/articles/new", (req:any, res: any)=>{
-    res.send("Rota para criar nova categorria")
+    res.render("admin/articles/new")
 })
 
 
